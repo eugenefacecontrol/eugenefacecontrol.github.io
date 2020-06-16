@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 numbers</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var divNumbers = document.getElementById("numbers");
+        for (var i = 0; i < 59; i++) {
+            $("#numbers").append("<br>");
+        }
+        $("#numbers").append("<p id='sixthNumber'>6</p>");
+    });
+</script>
+</head>
+
+<body>
+    <div id="numbers">
+        <p id='firstNumber'>1</p>
+        <p id='secondNumber'>2</p>
+        <p id='thirdNumber'>3</p>
+        <p id='fourthNumber'>4</p>
+        <p id='fifthNumber'>5</p>
+    </div>
+</body>
+
+</html>
