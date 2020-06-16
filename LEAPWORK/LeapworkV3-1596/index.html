@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Double click mouse test page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <style>
+        textarea {
+            width: 500px;
+            height: 400px;
+        }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Double click mouse test page</title>
-</head>
-<style>
-    textarea {
-        width: 500px;
-        height: 400px;
-    }
-
-    .click {
-        width: 100%;
-        height: 200px;
-        background: orange;
-        text-align: center;
-        color: #fff;
-        cursor: pointer;
-        font-size: 20px;
-    }
-</style>
-<script>
-    $( "#target" ).dblclick(function() {
-  $("#target").text("Done!");
-});
-</script>
-<body>
-    <button id="target">
-        Double-click here
+        .click {
+            width: 100%;
+            height: 200px;
+            background: orange;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#target").dblclick(function() {
+                $("#target").text("Done!");
+            });
+        })
+    </script>
+    <body>
+        <button id="target">Double-click here
     </button>
-    <div id="other">
-
-    </div>
-</body>
-
+        <div id="other"></div>
+    </body>
 </html>
