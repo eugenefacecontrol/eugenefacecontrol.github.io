@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dissapearing Spinner Original</title>
+    <style>
+        #loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+        }
+
+        #loader2 {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $("#loader").remove();
+            }, 5000);
+
+            setTimeout(function () {
+                $("#loader2").remove();
+            }, 3000);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="loaders">
+        <div id="loader"></div>
+        <!--   <div id="loader2"></div> -->
+    </div>
+</body>
+
+</html>
