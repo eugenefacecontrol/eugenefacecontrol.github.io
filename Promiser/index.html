@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promiser</title>
+</head>
+
+<body>
+    <h1 style="text-align:center;font-family:courier,arial,helvetica;font-size: 100px" id="debt"></h1>
+</body>
+<script>
+    let startDate = new Date(2020, 11, 25);
+    let dateNow = new Date();
+    const diffTime = Math.abs(dateNow - startDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    console.log(diffTime + " milliseconds");
+    console.log(diffDays + " days");
+    let debt = ((diffDays * 5.6) + 70) + 5600;
+    document.getElementById("debt").innerHTML = diffDays + "-й день. Твой долг: " + debt;
+</script>
+
+</html>
