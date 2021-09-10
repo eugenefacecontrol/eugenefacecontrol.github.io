@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeapworkV3-267</title>
+</head>
+
+<body>
+    <ul id="test">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+</body>
+<script>
+    let test = document.getElementById("test");
+
+    // This handler will be executed only once when the cursor
+    // moves over the unordered list
+    // This handler will be executed every time the cursor
+    // is moved over a different list item
+    test.addEventListener("mouseover", function (event) {
+        // highlight the mouseover target
+        event.target.style.color = "orange";
+        event.target.innerText = "asd";
+
+        // reset the color after a short delay
+        // setTimeout(function () {
+        //     event.target.style.color = "";
+        // }, 500);
+    }, false);
+</script>
+
+</html>
