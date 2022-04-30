@@ -14,8 +14,8 @@
         $.getJSON("https://www.nbrb.by/api/exrates/rates/292", function (result) {
             let usdRate = sessionStorage.getItem("usdRate");
             sessionStorage.setItem("eurRate", result.Cur_OfficialRate);
-            let usd = 1212-950;
-            let byn = 200;
+            let usd = 1212-950-250;
+            let byn = 200-140;
             let eur = 25;
             let sum = usd + (byn / usdRate) + (eur * 1, 21);
             document.getElementById("USD").innerText = usd;
@@ -35,29 +35,19 @@
 <body>
     <table>
         <tr>
-            USD
-        </tr>
+            <th>USD</th>
+            <th>BYN</th>
+            <th>EUR</th>
+            <th>Sum</th>
         <tr>
-            BYN
-        </tr>
-        <tr>
-            EUR
-        </tr>
-        <tr>
-            Sum
-        </tr>
-        <td id="USD">
-            
-        </td>
-        <td id="BYN">
-            
-        </td>
-        <td id="EUR">
-            
-        </td>
-        <td id="Sum">
-            0
-        </td>
+            <td id="USD"></td>
+        <td id="BYN"></td>
+        <td id="EUR"></td>
+        <td id="Sum">0</td>
+    </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
     </table>
 
 </body>
